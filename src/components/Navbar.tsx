@@ -3,8 +3,8 @@ import MaxWidthWrapper from './MaxWidthWrapper'
 import { buttonVariants } from './ui/button'
 import { LoginLink, RegisterLink, getKindeServerSession, } from '@kinde-oss/kinde-auth-nextjs/server'
 import { ArrowRight } from 'lucide-react'
-import UserAccountNav from './UserAccountNav'
-import MobileNav from './MobileNav'
+// import UserAccountNav from './UserAccountNav'
+// import MobileNav from './MobileNav'
 
 const Navbar = () => {
     const { getUser } = getKindeServerSession()
@@ -18,7 +18,7 @@ const Navbar = () => {
                         <span>Vervox.</span>
                     </Link>
 
-                    <MobileNav isAuth={!!user} />
+                    {/* <MobileNav isAuth={!!user} /> */}
 
                     <div className='hidden items-center space-x-4 sm:flex'>
                         {!user ? (
@@ -30,8 +30,7 @@ const Navbar = () => {
                                     Sign in
                                 </LoginLink>
                                 <RegisterLink className={buttonVariants({ size: 'sm', })}>
-                                    Get started{' '}
-                                    <ArrowRight className='ml-1.5 h-5 w-5' />
+                                    Get started{' '} <ArrowRight className='ml-1.5 h-5 w-5' />
                                 </RegisterLink>
                             </>
                         ) : (
@@ -45,7 +44,7 @@ const Navbar = () => {
                                     Dashboard
                                 </Link>
 
-                                <UserAccountNav
+                                {/* <UserAccountNav
                                     name={
                                         !user.given_name || !user.family_name
                                             ? 'Your Account'
@@ -53,7 +52,7 @@ const Navbar = () => {
                                     }
                                     email={user.email ?? ''}
                                     imageUrl={user.picture ?? ''}
-                                />
+                                /> */}
                             </>
                         )}
                     </div>
