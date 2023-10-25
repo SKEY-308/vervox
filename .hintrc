@@ -10,6 +10,7 @@
           "@layer"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
